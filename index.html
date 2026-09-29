@@ -10799,6 +10799,82 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<!--------------------->
+<h2 id="5)-%F0%9F%93%88-Linda-%E2%80%94-Multi-TF-Regime-Dashboard">5) 📈 <a href="https://github.com/UzunDemir/linda">Linda — Multi-TF Regime Dashboard</a><a class="anchor-link" href="#5)-%F0%9F%93%88-Linda-%E2%80%94-Multi-TF-Regime-Dashboard">¶</a></h2><p><strong>HMM-Powered Forex Scanner · XGBoost Signal Forecaster · Live Dashboard</strong></p>
+<p><img alt="Python" src="https://img.shields.io/badge/Python-3.10-blue.svg"/> <img alt="Flask" src="https://img.shields.io/badge/Flask-3.x-lightgrey"/> <img alt="XGBoost" src="https://img.shields.io/badge/XGBoost-3.x-orange"/> <img alt="HMM" src="https://img.shields.io/badge/Model-HMM-green"/></p>
+<h3 id="%E2%9C%A8-Overview">✨ Overview<a class="anchor-link" href="#%E2%9C%A8-Overview">¶</a></h3><p><strong>Linda</strong> — это комплексная система анализа рынка, которая объединяет скрытые марковские модели (HMM) с градиентным бустингом (XGBoost) для обнаружения, классификации и прогнозирования рыночных режимов в реальном времени по 15 инструментам (форекс, криптовалюты, металлы).</p>
+<h3 id="%F0%9F%9A%80-Key-Features">🚀 Key Features<a class="anchor-link" href="#%F0%9F%9A%80-Key-Features">¶</a></h3><ul>
+<li><strong>🔍 Real-time regime detection</strong> — HMM на 8 состояний на 5 таймфреймах (M5 → D1) для каждого символа.</li>
+<li><strong>🎯 Scanner v5</strong> — Конечный автомат (WATCHLIST → READY → EXECUTABLE → LATE → EXHAUSTED) с оценкой преимущества.</li>
+<li><strong>🤖 Signal Forecaster</strong> — Модели XGBoost (5 горизонтов на символ) для прогнозирования направления от 15 минут до 4 часов вперед.</li>
+<li><strong>📊 Live Dashboard</strong> — SPA с темной темой, обновлениями в реальном времени, перетаскиваемыми панелями и торговыми решениями.</li>
+<li><strong>💬 LLM Chat</strong> — Ассистент Linda (на базе DeepSeek) для вопросов по рынку.</li>
+<li><strong>⚡ 60+ trained models</strong> — 15 символов × 5 горизонтов, переобучаемые по требованию.</li>
+</ul>
+<h3 id="%F0%9F%9B%A0%EF%B8%8F-Tech-Stack">🛠️ Tech Stack<a class="anchor-link" href="#%F0%9F%9B%A0%EF%B8%8F-Tech-Stack">¶</a></h3><table>
+<thead>
+<tr><th>Component</th><th>Technology</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Backend</strong></td><td>Python 3.10, Flask 3.x, Waitress</td></tr>
+<tr><td><strong>ML</strong></td><td>NumPy, pandas, XGBoost 3.x, scikit-learn</td></tr>
+<tr><td><strong>HMM</strong></td><td>Custom implementation (Baum-Welch, HSMM, K-Means++)</td></tr>
+<tr><td><strong>Data</strong></td><td>SQLite (WAL), MetaTrader 5 API</td></tr>
+<tr><td><strong>Frontend</strong></td><td>Vanilla JS + CSS (dark theme), 84KB app.js</td></tr>
+<tr><td><strong>LLM</strong></td><td>DeepSeek V4 API (Linda Chat)</td></tr>
+</tbody>
+</table>
+
+<h2 id="6)-%F0%9F%9B%A0%EF%B8%8F-DeepSeek-Skill-Forge">6) 🛠️ <a href="https://github.com/UzunDemir/deepseek-skill-forge">DeepSeek Skill Forge</a><a class="anchor-link" href="#6)-%F0%9F%9B%A0%EF%B8%8F-DeepSeek-Skill-Forge">¶</a></h2><p><strong>172 специализированных AI-агента для DeepSeek TUI</strong></p>
+<p><img alt="AI Agents" src="https://img.shields.io/badge/Agents-172-blueviolet"/> <img alt="DeepSeek" src="https://img.shields.io/badge/LLM-DeepSeek-green"/> <img alt="License" src="https://img.shields.io/badge/License-MIT-lightgrey"/></p>
+<h3 id="%E2%9C%A8-Overview">✨ Overview<a class="anchor-link" href="#%E2%9C%A8-Overview">¶</a></h3><p><strong>DeepSeek Skill Forge</strong> — это библиотека готовых инструкций (скиллов) для DeepSeek TUI, конвертированная из Awesome Codex Subagents и расширенная контрактами, бенчмарками и композиционными воркфлоу. Каждый агент — это не просто промпт, а инженерная спецификация с рабочей моделью, фокусами, проверками качества и границами ответственности.</p>
+<h3 id="%F0%9F%9A%80-Key-Features">🚀 Key Features<a class="anchor-link" href="#%F0%9F%9A%80-Key-Features">¶</a></h3><ul>
+<li><strong>🔥 Авто-триггеринг:</strong> Запросы автоматически сопоставляются с описанием агента, и нужный скилл загружается в контекст.</li>
+<li><strong>📦 13 категорий агентов:</strong> От Core Development и Language Specialists до AI Governance и LLMOps.</li>
+<li><strong>🧠 Два механизма:</strong> Использует `SKILL.md` для инструкций главному агенту и `spawn-templates` (JSON) для параллельного запуска суб-агентов (например, для ревью).</li>
+<li><strong>🔗 Композиционные воркфлоу:</strong> Готовые YAML-пресеты для типовых задач, таких как `pr-review-chain` или `bug-investigation`.</li>
+<li><strong>✅ Валидация:</strong> Встроенный скрипт `validate_skills.py` для CI-проверки целостности всех 172 агентов.</li>
+</ul>
+<h3 id="%F0%9F%9B%A0%EF%B8%8F-Tech-Stack">🛠️ Tech Stack<a class="anchor-link" href="#%F0%9F%9B%A0%EF%B8%8F-Tech-Stack">¶</a></h3><table>
+<thead>
+<tr><th>Component</th><th>Technology</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Platform</strong></td><td>DeepSeek TUI</td></tr>
+<tr><td><strong>Agent Format</strong></td><td>Markdown (SKILL.md), YAML, JSON</td></tr>
+<tr><td><strong>Languages</strong></td><td>Python (for conversion scripts)</td></tr>
+<tr><td><strong>LLM</strong></td><td>DeepSeek</td></tr>
+</tbody>
+</table>
+
+<h2 id="7)-%F0%9F%92%B3-Volt-Credit-Decisioning">7) 💳 <a href="https://github.com/UzunDemir/volt-credit-decisioning">Volt Credit Decisioning</a><a class="anchor-link" href="#7)-%F0%9F%92%B3-Volt-Credit-Decisioning">¶</a></h2><p><strong>End-to-end ML platform for credit scoring</strong></p>
+<p><a href="https://volt-uzun.streamlit.app/"><img alt="Streamlit App" src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg"/></a> <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white"/> <img alt="MLflow" src="https://img.shields.io/badge/MLflow-0194E2?style=flat&logo=mlflow&logoColor=white"/> <img alt="Airflow" src="https://img.shields.io/badge/Airflow-017CEE?style=flat&logo=apacheairflow&logoColor=white"/> <img alt="Grafana" src="https://img.shields.io/badge/Grafana-F46800?style=flat&logo=grafana&logoColor=white"/></p>
+<h3 id="%E2%9C%A8-Overview">✨ Overview<a class="anchor-link" href="#%E2%9C%A8-Overview">¶</a></h3><p><strong>Volt Credit Decisioning</strong> — это production-ориентированная платформа для кредитного скоринга, разработанная для демонстрации полного жизненного цикла ML-модели: от feature engineering на SQL до мониторинга дрифта и автоматического переобучения. Проект отвечает на вопросы, которые возникают у модели <em>после</em> ноутбука: калибровка, учет бизнес-стоимости, мониторинг и безопасный деплой.</p>
+<h3 id="%F0%9F%9A%80-Key-Features">🚀 Key Features<a class="anchor-link" href="#%F0%9F%9A%80-Key-Features">¶</a></h3><ul>
+<li><strong>🏭 Production SQL:</strong> Единое SQL-представление (`v_credit_features`) используется для обучения, сервинга и мониторинга, что исключает train-serve skew.</li>
+<li><strong>💰 Cost-Aware Threshold:</strong> Порог одобрения выбирается на основе бизнес-стоимости ошибок (FP×cost_fp + FN×cost_fn), а не по AUC.</li>
+<li><strong>🔄 MLOps:</strong> Отслеживание экспериментов и реестр моделей в MLflow, CI/CD с GitHub Actions, Docker Compose для всего стека.</li>
+<li><strong>👁️ Observability:</strong> Мониторинг дрифта данных с помощью Evidently, дашборды и алерты в Grafana, интегрированные с API.</li>
+<li><strong>⚙️ Orchestration:</strong> Airflow для планирования задач мониторинга, переобучения и прогнозирования.</li>
+<li><strong>🧪 Experimentation:</strong> A/B тестирование, uplift-моделирование и план раскатки.</li>
+</ul>
+<h3 id="%F0%9F%9B%A0%EF%B8%8F-Tech-Stack">🛠️️ Tech Stack<a class="anchor-link" href="#%F0%9F%9B%A0%EF%B8%8F-Tech-Stack">¶</a></h3><table>
+<thead>
+<tr><th>Component</th><th>Technology</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Feature Engineering</strong></td><td>PostgreSQL, SQL (JSONB, window functions)</td></tr>
+<tr><td><strong>ML / Training</strong></td><td>scikit-learn, XGBoost, MLflow</td></tr>
+<tr><td><strong>Serving</strong></td><td>FastAPI, Docker</td></tr>
+<tr><td><strong>Monitoring</strong></td><td>Evidently, Grafana, Prometheus</td></tr>
+<tr><td><strong>Orchestration</strong></td><td>Apache Airflow</td></tr>
+<tr><td><strong>Dashboard</strong></td><td>Streamlit</td></tr>
+<tr><td><strong>Deployment</strong></td><td>Docker Compose, Render, Azure App Service</td></tr>
+</tbody>
+</table>
+
+<hr/>
+<!--------------------->    
 <h2 id="1)-%F0%9F%8F%97%EF%B8%8F-ML-Project-Template-%E2%80%93-Production-Ready-Machine-Learning-Platform-by-Uzun-Demir">1) 🏗️ ML Project Template – <a href="https://github.com/UzunDemir/uzun_architect">Production-Ready Machine Learning Platform by Uzun Demir</a><a class="anchor-link" href="#1)-%F0%9F%8F%97%EF%B8%8F-ML-Project-Template-%E2%80%93-Production-Ready-Machine-Learning-Platform-by-Uzun-Demir">¶</a></h2><p><a href="https://docker.com"><img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=flat&amp;logo=docker&amp;logoColor=white"/></a>
 <a href="https://fastapi.tiangolo.com"><img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-009688?style=flat&amp;logo=fastapi&amp;logoColor=white"/></a>
 <a href="https://python.org"><img alt="Python" src="https://img.shields.io/badge/Python-3.11-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/></a></p>
